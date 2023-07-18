@@ -14,3 +14,8 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+@media  only screen and (max-width : 600px){
+    .movie__list{
+        margin-left: -21px;
+    }
+}

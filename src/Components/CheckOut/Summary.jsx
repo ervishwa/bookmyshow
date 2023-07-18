@@ -4,7 +4,8 @@ import "./CheckOut.css";
 export function Summary(props) {
   const totalTicketPrice =
     Number(props.BookingDetails.price) * Number(props.BookingDetails.noSeats);
-  const tax =  (totalTicketPrice * 0.0175).toFixed(2);
+  const tax =  (totalTicketPrice * 0.0275).toFixed(2);
+  const gst = (totalTicketPrice * 0.0500).toFixed(2);
   return (
     <div className="summary-slip">
       <div className="wraper-div">
@@ -31,12 +32,17 @@ export function Summary(props) {
           </span>
         </div>
         <div className="eachTicket">
-          <span>Convenience Fee(1.75%)</span>
+          <span>Convenience Fee(2.75%)</span>
           <span>&#8377; {tax}</span>
         </div>
         <div className="eachTicket">
+          <span>Gst (5%)</span>
+          <span>&#8377; {gst}</span>
+        </div>
+
+        <div className="eachTicket">
           <span>Sub total</span>
-          <span>&#8377; {Number(totalTicketPrice) + Number(tax)}</span>
+          <span>&#8377; {Number(totalTicketPrice) + Number(tax) + Number(gst)}</span>
         </div>
       </div>
     </div>

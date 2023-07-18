@@ -62,3 +62,28 @@ li:hover{
     font-size: large;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 1400px){
+    .Catogary_list{
+        display: none;
+    }  
+}
+@media only screen and (max-width:772px){
+.posterImage__title{
+    font-size: 2rem;
+}
+}
+@media only screen and (max-width:600px){
+    .posterImage__title{
+        font-size: 1rem;
+    }
+    .posterImage__runtime{
+        font-size: 1rem;
+    }
+    .posterImage__description{
+       max-height: 222px;
+        font-size: 12px;
+        flex-wrap: wrap;
+        width: 70%;
+    }
+}

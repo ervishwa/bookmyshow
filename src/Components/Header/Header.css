@@ -37,13 +37,80 @@ img{
 .input_text{
     margin-right: 2px;
     border-radius: 5px;
-    height: 20px;
+    height: 36px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(32, 28, 28);
+    color: white;
+    text-align: center;
+    border: 2px solid black;
+    text-decoration: solid;
 }
 button{
     border-radius: 5px;
-    cursor: pointer;  
+    cursor: pointer; 
+    width: 60px;
+    height: 40px;
+    background-color: rgb(41, 35, 35);
+    border: none;
+    color: white;
+}
+.search_button{
+    width: 90px;
+    height: 40px;
+    background-color: rgb(32, 28, 28);
+    color: white;
+    border: none;
 }
 .signin{
-    background-color: white;
     border-radius: 5px;
+    cursor: pointer; 
+    width: 60px;
+    height: 40px;
+    background-color:rgb(32, 28, 28);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headerright{
+    width: 40vw;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.userInfo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+@media only screen and (max-width: 1033px) {
+    .input_text{
+        width: 61%;
+    }
+}
+@media only screen and (max-width:600px){
+    .header{
+        margin-left: 0;
+    }
+    .headerLeft span{
+        margin: 0px 9px;
+    }
+    .headerright{
+        display: revert;
+    }
+    .input_text{
+      display:none;
+    }
+    .userInfodiv{ 
+    /* position: relative;
+    top: 50px;
+    z-index: 999;
+    right: 20px; */
+    }
+   
+
 }

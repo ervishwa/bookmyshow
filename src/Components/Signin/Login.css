@@ -18,8 +18,9 @@
 
 .login > h1 {
   margin-top: 50px;
-  font-family: cursive;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: cornsilk;
+  font-size: 50px;
 }
 
 .sub-login {
@@ -28,7 +29,8 @@
   align-items: center;
   justify-content: space-evenly;
   height: 80vh;
-  background-color:#B9F3E4;
+  background-color:black;
+  border: 2px solid red;
 }
 
 .sub-login  > img {
@@ -46,10 +48,11 @@
 .login-box > h1 {
   font-weight: 400;
   margin-bottom: 5px;
+  color: white;
 }
 
 .login-box  > div {
-  background-color: rgb(130, 33, 221);
+  background-color: rgb(169, 149, 187);
   height: 3px;
   width: 7rem;
   border-radius: 50%;
@@ -69,7 +72,7 @@
 
 }
 .login-box > button {
-  background-color: rgb(130, 33, 221);
+  background-color: rgb(100, 88, 111);
   width: 22rem;
   height: 3rem;
   margin: 20px;
@@ -83,11 +86,28 @@
 }
 .login-box > button:active {
   transform: scale(0.9);
-  background-color: rgb(110, 33, 182);
+  background-color: red;
 
 }
 
 .login-box > a {
   text-decoration: none;
+  color: red;
 
+}
+
+@media only screen and (max-width:600px) {
+.login h1{
+  font-size: 31px;
+}
+.login-box > input {
+  width: 18rem;
+}
+.login-box > button {
+  width: 19rem;
+}
+.sub-login{
+  height: 60vh;
+  margin-top: 32px;
+}
 }

@@ -10,8 +10,9 @@
     justify-content: space-evenly;
     min-height: 100vh;
     height: fit-content;
-    background-color: rgb(255, 255, 255);
-    color: rgb(3, 30, 54);
+    background-color: black;
+    color: white;
+    
 }
 
 .signup > img {
@@ -24,10 +25,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 2px solid red;
+    width: 80vw;
+    height: 80vh;
+    
 }
 
 .signup-box > div {
-    background-color: rgb(130, 33, 221);
+    background-color: rgb(169, 149, 187);
     height: 3px;
     width: 7rem;
     border-radius: 50%;
@@ -37,7 +42,7 @@
 .signup-box > h1 {
     font-weight: 400;
     margin-bottom: 5px;
-
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .signup-box > input {
@@ -51,7 +56,7 @@
     font-size: large;
 }
 .signup-box > button {
-    background-color: rgb(130, 33, 221);
+    background-color: rgb(100, 88, 111);
     width: 22rem;
     height: 3rem;
     margin: 10px;
@@ -68,11 +73,23 @@
 
 .signup-box > button:active {
     transform: scale(0.9);
-    background-color: rgb(110, 33, 182);
+    background-color: red;
 
 }
 
 .signup-box > a {
     text-decoration: none;
+    color: red;
+}
 
+@media only screen and (max-width:600px) {
+    .signup-box > input{
+        width: 17rem;
+    }
+    .signup-box > button{
+        width: 18rem;
+    }
+    .signup-box{
+        height: 57vh;
+    }
 }

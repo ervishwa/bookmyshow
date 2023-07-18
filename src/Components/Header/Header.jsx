@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Link } from "react-router-dom"
 import "./Header.css"
 import { useFirebase } from '../../Firebase'
-
+import MenuIcon from '@mui/icons-material/Menu';
 export const Header = () => {
 
+  // const userref = useRef(null);
   const firebase = useFirebase();
    console.log(firebase.currUser);
 
@@ -27,16 +28,24 @@ export const Header = () => {
          <input className='input_text' type="text" placeholder='Search for Movies'></input>
          <button className='search_button'>Search</button>
        </div>
-    </div>
-
-
-    {(firebase.currUser) ?  <div><button onClick={HandelClick}>Log out</button>
+       <div className='userInfodiv'>
+       {(firebase.currUser) ?  <div className='userInfo'><button onClick={HandelClick}>Log out</button>
     <span>{firebase.currUser.email}</span></div>  : <div className='signin'>
-     <Link to="/login" style={{textDecoration:"none"}}>Sign in</Link>
+     <Link to="/login" style={{textDecoration:"none" , color : "white"}}>Sign in</Link>
     </div> }
     {/* <div>
      <Link to="/login">Sign in</Link>
     </div> */}
+
+       </div>
+      
+
+    </div>
+
+     
+    {/* <button onClick={()=>{
+      userref.current.style.display = "none";
+    }}><MenuIcon className='menubar'/></button>  */}
    
 
 </div>
